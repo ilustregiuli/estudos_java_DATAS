@@ -2,6 +2,9 @@ package datas;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -86,7 +89,39 @@ public class Program {
 		
 		System.out.println("Vamulá formatado: " + formataVamula.format(vamula));
 		
-
+		System.out.println("\n\n********** ESTUDOS COM LOCALDATE *********************");
+		
+		LocalDate hoje = LocalDate.now(); // dia atual
+		
+		System.out.println(hoje);
+		
+		LocalDate ontem = hoje.minusDays(1); // subtrai um dia 
+		
+		System.out.println(ontem);
+		
+		System.out.println("\n\n********** ESTUDOS COM LOCALTIME *********************");
+		
+		LocalTime horaAtual = LocalTime.now(); // hora atual
+		
+		System.out.println(horaAtual);
+		
+		LocalTime daquiAUmaHora = horaAtual.plusHours(1);
+		
+		System.out.println(daquiAUmaHora);
+		
+		System.out.println("\n\n********** ESTUDOS COM LOCALDATETIME *********************");
+		
+		LocalDateTime maisUmAgora = LocalDateTime.now();
+		
+		System.out.println(maisUmAgora);
+		
+		LocalDateTime amanhaNoFuturo = maisUmAgora.plusHours(10).plusDays(1).plusSeconds(30);
+		
+		System.out.println(amanhaNoFuturo);
+		
+		
+		
+		
 	}
 
 }
